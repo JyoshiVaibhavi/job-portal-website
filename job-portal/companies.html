@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comapnies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background-image: linear-gradient(to right, white, white);
+
+    }
+
+    #head {
+
+        height: 80px;
+       
+        padding: 10px;
+
+    }
+    button {
+        border-radius: 5px;
+    }
+
+    .logo {
+        font-size: 30px;
+        font-family: monospace;
+        color: white;
+    }
+
+    span {
+        color: rgb(46, 138, 174);
+    }
+
+    #navbarNav {
+        margin-left: 30px;
+        padding: 5px;
+
+    }
+
+    .nav-item :hover {
+        background-color: black;
+
+    }
+
+    .card-body {
+        background-color: rgb(255, 239, 135);
+        padding: 10px;
+    }
+
+    .btn {
+        background-color: rgb(10, 10, 73);
+        margin: 10px;
+    }
+
+    .jobImage {
+        width: 100%;
+    }
+    h1{
+        color: black;
+    }
+    .card-text{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    #searchInput{
+        padding:6px;
+        border-radius:8px;
+        height:40px;
+        margin-top:10px;
+ 
+    }
+    .jobItem{
+        border: 2px black solid;
+       
+    }
+    
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid" id="head">
+            <a class="logo navbar-brand text-light" href="#">
+                <i class="fa-solid fa-people-group fa-xl text-light" class="logo"></i>&nbsp;<b>Job
+                    <span>Portal</span></b></a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item ">
+                        <a class="nav-link active text-light" aria-current="page" href="index.html"
+                            style="padding-right:30px; font-size: 20px;font-family: 'Courier New';"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="jobs.html"
+                            style="padding-right:30px;font-size: 20px;font-family: 'Courier New';"><b>Jobs</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="companies.html"
+                            style="padding-right:30px;font-size: 20px;font-family: 'Courier New';"><b>Companies</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-disabled="true" href="contact.html"
+                            style="padding-right:30px;font-size: 20px;font-family: 'Courier New';"><b>Contact</b>
+        
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="two">
+                <input type="text" placeholder="Search" id="searchInput" style="padding:5px">
+                <i class="fa-solid fa-magnifying-glass fa-l "
+                    style="margin-top:15px;color:white;margin-right: 20px;"></i>
+
+                    <a href="sign-up.html"><button class="bg-light p-1"><i class="fa-solid fa-user-plus"></i>SIGN
+                        UP</button></a> 
+                        <a href="log-in.html"><button class="bg-danger p-1"><i
+                            class="fa-solid fa-right-to-bracket "></i>LOGIN</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- nav ends here -->
+    <h1 class="pb-2 m-4" >Top Companies..!</h1>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col-md-4">
+                <div class="jobItem" class="card" data-company="Google" style="width: 100%;">
+                    <img src="images/img1.jpg" class="jobImage" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Google</h4>
+                        <p class="card-text ">For more details...</p>
+                        <a href="https://www.google.com/" class="btn btn-primary">Click Here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jobItem" class="card" data-company="TCS" style="width: 100%;">
+                    <img src="images/img2.avif" class="jobImage" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">TCS</h4>
+                        <p class="card-text">For more details...</p>
+                        <a href="https://www.tcs.com/" class="btn btn-primary">Click Here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jobItem" class="card" data-company="Wipro" style="width: 100%;">
+                    <img src="images/img3.jpg" class="jobImage" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Wipro</h4>
+                        <p class="card-text">For more details...</p>
+                        <a href="https://www.wipro.com/" class="btn btn-primary">Click Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-4">
+                <div class="jobItem" class="card" data-company="Accenture"  style="width: 100%;">
+                    <img src="images/img4.png" class="jobImage" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Accenture</h4>
+                        <p class="card-text">For more details...</p>
+                        <a href="https://www.amazon.com/" class="btn btn-primary">Click Here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jobItem" class="card" data-company="Tech Mahindra" style="width: 100%;">
+                    <img src="images/img5.png" class="jobImage" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Tech Mahindra</h4>
+                        <p class="card-text">For more details...</p>
+                        <a href="https://www.ibm.com/" class="btn btn-primary">Click Here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jobItem" class="card" data-company="Cognizant" style="width: 100%;">
+                    <img src="images/img6.png" class="jobImage" class="card-img-top" alt="..."
+                        style="background-color: white;">
+                    <div class="card-body">
+                        <h4 class="card-title">Cognizant</h4>
+                        <p class="card-text">For more details...</p>
+                        <a href="https://www.infosys.com/" class="btn btn-primary">Click Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-4">
+                <div class="jobItem" class="card" data-company="Amazon" style="width: 100%;">
+                    <img src="images/img7.jpg" class="jobImage" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Amazon</h4>
+                        <p class="card-text">For more details...</p>
+                        <a href="https://www.amazon.com/" class="btn btn-primary">Click Here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jobItem" class="card" data-company="IBM" style="width: 100%;">
+                    <img src="images/img8.jpg" class="jobImage" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">IBM</h4>
+                        <p class="card-text">For more details...</p>
+                        <a href="https://www.ibm.com/" class="btn btn-primary">Click Here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jobItem" class="card" data-company="Infosys"  style="width: 100%;">
+                    <img src="images/img9.jpg" class="jobImage" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Infosys</h4>
+                        <p class="card-text">For more details...</p>
+                        <a href="https://www.infosys.com/" class="btn btn-primary">Click Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function () {
+            var searchTerm = this.value.toLowerCase();
+            var jobItems = document.querySelectorAll('.jobItem');
+
+            jobItems.forEach(function (jobItem) {
+                var company = jobItem.dataset.company.toLowerCase();
+
+                if (company.includes(searchTerm)) {
+                    jobItem.style.display = '';
+                } else {
+                    jobItem.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN-UP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background-color: rgb(69, 67, 67);
+    }
+
+    .container {
+        width: 100%;
+
+    }
+
+    #col-1 {
+        width: 400px;
+        height: auto;
+        margin: auto;
+
+    }
+
+    h1 {
+        text-align: center;
+        padding-top: 50px;
+        font-size: 50px;
+        color: white;
+    }
+
+    label {
+        color: white;
+
+
+    }
+
+    input {
+        background-color: transparent;
+        border: 0px solid;
+        height: 25px;
+        width: auto;
+        color: white;
+        margin-top: 30px;
+    }
+
+    .btn1 {
+        width: 200px;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 25%;
+        margin-bottom:10px;
+        padding-bottom:20px;
+        padding-top:5px;
+        font-size: 20px;
+        font-family: sans-serif;
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        text-align: center;
+    }
+
+    .btn1:hover {
+        background-color: white;
+        color: black;
+    }
+
+    hr {
+
+        color: white;
+        border-bottom: 2px solid white;
+
+    }
+
+    #div-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .show {
+        padding-top: 30px;
+        margin-left: 8px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    #showPassword{
+        width:15px;
+    }
+    a{
+    text-decoration: none;
+    color: black;
+    font-size:15px;
+    font-family:tahoma ;
+}
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="col-1">
+                <h1><b>SIGN UP</b></h1>
+
+                <label for="name"><b>Full Name:</b></label>
+                <input type="text" id="fname">
+                <hr>
+                <label for="email"><b>E-Mail:</b></label>
+                <input type="email" id="mail">
+                <hr>
+                <label for="password" id="myInput"><b>Passsword:</b></label>
+                <input type="password" id="password">
+
+                <hr>
+                <label for="confirm"><b>Confirm Password:</b></label>
+                <input type="password" id="confirmPassword">
+                <hr>
+                <div id="div-1">
+                    <input type="checkbox" id="showPassword" onchange="PasswordVisibility()">
+                    <label for="showPassword" class="show"><i>Show Password</i></label>
+                </div>
+                <br><br>
+                <!-- <button onclick="Form()"><b>sign up</b></button> -->
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn1" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    onclick="Form()">
+                   <b>Sign Up</b>
+                   </button>
+                   <p style="font-size:15px;text-align: center;color: white;cursor: pointer;">Already registered? <a href="log-in.html">Login</a> </p>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background-color: aquamarine;">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: maroon;font-size:100px;"><b>Your Details</b></h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="background-color: rgb(181, 244, 223);">
+                                <h3 id="text" style="color: black;font-size:20px;background-color: rgb(181, 244, 223);"></h3>
+                               
+                               
+                            </div>
+                            <div class="modal-footer" style="background-color: rgb(181, 244, 223);">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="width: 150px;" >Close</button>
+                                <a href="sign-up.html"><button type="button" class="btn btn-primary" style="width:150px;margin-right:50px;">Save changes</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal ends -->
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        document.getElementById('showPassword').addEventListener('change', function () {
+            var password = document.getElementById('password');
+            var confirmPassword = document.getElementById('confirmPassword');
+
+            if (this.checked) {
+                password.type = 'text';
+                confirmPassword.type = 'text';
+            } else {
+                password.type = 'password';
+                confirmPassword.type = 'password';
+            }
+        });
+        function Form() {
+            let data1 = document.getElementById('fname').value
+            let data2 = document.getElementById('mail').value
+            let data3 = document.getElementById('password').value
+            let data4 = document.getElementById('confirmPassword').value
+            document.getElementById('text').innerHTML =
+                // data1 + "<br>" + data2 + "<br>" + data3 + "<br>" + data4
+                "Full Name:&nbsp;"+ data1+ "<br><br>E-mail:&nbsp;"+data2+"<br><br>Pasword:&nbsp;"+data3
+               
+                
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>

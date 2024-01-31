@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG-IN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body{
+        background-image: linear-gradient(to right, rgb(12, 90, 93),rgb(255, 149, 244)); 
+    }
+     .container {
+        width: 100%;
+        margin-top:200px;
+       
+
+    }
+
+    #col-1 {
+        width: 400px;
+        height: auto;
+        margin: auto;
+}
+input{
+    width: 250px;
+    height:50px;
+    background-color:transparent ;
+    border: 2px solid white;
+}
+input::placeholder{
+    padding: 2px;
+    color: black;
+}
+p{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#login{
+    font-family:bold;
+}
+#login:hover{
+    background-color: antiquewhite;
+    color: black;
+    
+
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="col-1">
+               <h2 style="margin-left:80px; margin-bottom:30px;"><i class="fa-solid fa-right-to-bracket"></i><b>LOGIN</b></h2>
+                <i class="fa-regular fa-user fa-xl"></i>&nbsp;<input type="text" id="name" placeholder="Username" > <br><br> 
+                <i class="fa-solid fa-lock fa-xl"></i>&nbsp;<input type="text" id="pwd" placeholder="Password" > <br><br> 
+              &nbsp;  &nbsp;&nbsp;&nbsp;  <a href="post-job.html"><input type="submit" value="LOGIN" onclick="Form()" ></a><br> <br>
+                 
+              <p> Not registered? <a href="sign-up.html">Sign Up</a></p>
+
+            </div>
+
+        </div>
+   
+        
+    </div>
+    <script>
+        
+        function Form() {
+            
+           let data1 = document.getElementById('name').value
+           let data2 = document.getElementById('pwd').value
+           
+           if(data1=="" ){
+                         alert("please enter valid details")
+           }
+           else if(data2==""){
+                           alert("please enter valid details")
+           }
+           else{
+            alert("Welcome")
+           }
+               
+                
+        }
+
+    </script>
+
+    
+    
+</body>
+</html>

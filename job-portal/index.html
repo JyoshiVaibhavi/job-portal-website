@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background-image: url(images/portal.webp);
+        /* background-repeat: no-repeat; */
+        background-size:100%;
+    }
+
+    #head {
+
+        height: 80px;
+        padding: 10px;
+
+    }
+
+    .logo {
+        font-size: 30px;
+        font-family: monospace;
+    }
+
+    #navbarNav {
+        margin-left: 100px;
+        padding: 10px;
+
+    }
+
+    .nav-item :hover {
+        background-color: black;
+
+    }
+
+
+
+    #middle {
+        color: white;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 50px;
+        font-family: arial;
+    }
+
+    h5 {
+        font-size: 15px;
+        font-family: arial;
+    }
+
+    span {
+        color: rgb(46, 138, 174);
+    }
+
+    footer {
+        color: white;
+        display: flex;
+        cursor: pointer;
+        text-align: center;
+        justify-content: space-around;
+        background-color: transparent;
+    }
+
+    button {
+        border-radius: 5px;
+    }
+
+    #searchInput {
+        padding: 6px;
+        border-radius: 8px;
+        height: 40px;
+        margin-top: 10px;
+
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid" id="head">
+            <a class="logo navbar-brand text-light" href="#">
+                <i class="fa-solid fa-people-group fa-xl text-light" class="logo"></i>&nbsp;<b>Job
+                    <span>Portal</span></b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item ">
+                        <a class="nav-link active text-light" aria-current="page" href="index.html"
+                            style="padding-right:30px; font-size: 20px;font-family: 'Courier New';"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="jobs.html"
+                            style="padding-right:30px;font-size: 20px;font-family: 'Courier New';"><b>Jobs</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="companies.html"
+                            style="padding-right:30px;font-size: 20px;font-family: 'Courier New';"><b>Companies</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-disabled="true" href="contact.html"
+                            style="padding-right:30px;font-size: 20px;font-family: 'Courier New';"><b>Contact</b>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                        </a>
+
+            </div>
+            <div class="two">
+
+
+                <a href="sign-up.html"><button class="bg-light p-1"><i class="fa-solid fa-user-plus"></i>SIGN
+                        UP</button></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="log-in.html"><button class="bg-danger p-1"><i
+                            class="fa-solid fa-right-to-bracket "></i>LOGIN</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+
+    </nav>
+    <div class="container-fluid" id="middle">
+        <h1><span>3,000+</span> Browse Jobs</h1>
+        <h5>Find Jobs, Employment & Career Opportunities</h5>
+
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <select style="width:200px; height:40px; text-align: center; border-radius: 10px;">
+            <option>Select Location</option>
+            <option>Hyderabad</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+            <option>Chennai</option>
+            <option>Banglore</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select style="width:200px; height:40px;text-align: center; border-radius: 10px;">
+            <option>Experience</option>
+            <option>0-2 yrs</option>
+            <option>3-5 yrs</option>
+            <option>6-8 yrs</option>
+            <option>8-10 yrs</option>
+
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" placeholder="Keywords e.g.(Job Title,Description,Tags)" id="searchInput"
+            style="width:300px; height:40px; margin:10px; border-radius: 10px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+       
+        <h6 ><i class="fa-solid fa-tags"></i><b>Trending Keywords:</b> ui designer, developer, call center, senior it
+            company</h6>
+    </div>
+    <br><br><br><br><br><br><br>
+    <br><br><br>
+
+
+    <footer>
+        <nav class="jobItem" data-company="Fullstack Developer">
+            <a href="jobs.html" ><i class="fa-solid fa-code fa-xl"></i> <br>
+            <b>Fullstack Developer</b></a> <br>
+
+
+        </nav>
+        <nav class="jobItem" data-company="Data Sceintist">
+            <a href="jobs.html"><i class="fa-brands fa-react fa-xl"></i> <br>
+            <b>Data Scientist</b></a> <br>
+
+
+        </nav>
+        <nav class="jobItem" data-company="Cloud Engineer">
+            <a href="jobs.html"><i class="fa-solid fa-cloud fa-xl"></i><br>
+            <b>Cloud Engineer</b></a> <br>
+
+
+        </nav>
+        <nav class="jobItem" data-company="Machine Learning">
+            <a href="jobs.html"><i class="fa-solid fa-laptop fa-xl"></i><br>
+            <b>Machine Learning</b> </a><br>
+
+
+        </nav>
+        <nav class="jobItem" data-company="Product Manager">
+            <a href="jobs.html"><i class="fa-brands fa-product-hunt fa-xl"></i><br>
+            <b>Product Manager</b></a> <br>
+
+
+        </nav>
+
+        <nav class="jobItem" data-company="Database Engineer">
+            <a href="jobs.html"><i class="fa-solid fa-database fa-xl"></i><br>
+            <b>Database Engineer</b></a> <br>
+        </nav>
+        <nav class="jobItem" data-company="Cyber Security">
+            <a href="jobs.html"><i class="fa-solid fa-shield-halved fa-xl"></i><br>
+            <b>Cyber Security</b> </a><br>
+        </nav>
+    </footer>
+    <script>
+ document.getElementById('searchInput').addEventListener('input', function () {
+            var searchTerm = this.value.toLowerCase();
+            var jobItems = document.querySelectorAll('.jobItem');
+
+            jobItems.forEach(function (jobItem) {
+                var company = jobItem.dataset.company.toLowerCase();
+
+                if (company.includes(searchTerm)) {
+                    jobItem.style.display = '';
+                } else {
+                    jobItem.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

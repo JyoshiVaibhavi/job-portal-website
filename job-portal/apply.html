@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Job Application</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin:10px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f4f4f4;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #0c5a0f;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #208227;
+    }
+    button.return-button {
+        background-color: #333;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button.return-button:hover {
+        background-color: #555;
+    }
+</style>
+<body>
+    <form id="itJobApplicationForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="position">Position Applying For:</label>
+        <input type="text" id="position" name="position" required>
+
+        <label for="technicalSkills">Technical Skills (comma-separated):</label>
+        <input type="text" id="technicalSkills" name="technicalSkills" required>
+
+        <label for="education">Highest Education Level:</label>
+        <select id="education" name="education" required>
+            <option value="intermediate">Intermediate</option>
+            <option value="bachelors">Bachelor's Degree</option>
+            <option value="masters">Master's Degree</option>
+            <option value="phd">Ph.D.</option>
+        </select>
+
+        <label for="resume">Resume</label>
+        <input type="file" name="resume" id="resume">
+
+        <button type="button" onclick="submitApplication()">Submit Application</button>
+
+        <button class="return-button"><a href="jobs.html" style="text-decoration: none;color: white;">Return to Jobs</a></button>
+    </form>
+
+    <script>
+        function submitApplication() {
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const position = document.getElementById('position').value;
+            const technicalSkills = document.getElementById('technicalSkills').value.split(',').map(skill => skill.trim());
+            const education = document.getElementById('education').value;
+            const resume = document.getElementById('resume').value;
+
+
+            alert(`IT Job Application submitted!\n\nName: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nPosition: ${position}\nTechnical Skills: ${technicalSkills.join(', ')}\nEducation: ${education}\nResume: ${resume}`);
+        }
+
+    </script>
+</body>
+</html>

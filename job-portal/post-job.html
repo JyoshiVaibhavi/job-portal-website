@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST JOB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body{
+        background-image: linear-gradient(to right, rgb(200, 228, 90), rgb(126, 137, 73));
+
+         
+    }
+   
+
+    #head {
+
+        height: 80px;
+        
+        padding: 10px;
+
+    }
+
+    .logo {
+        font-size: 30px;
+        font-family: monospace;
+        color:white;
+    }
+
+    span {
+        color: rgb(46, 138, 174);
+    }
+
+    #navbarNav {
+        margin-left: 100px;
+        padding: 10px;
+
+    }
+
+    .nav-item :hover {
+        background-color: black;
+
+    }
+
+    #search {
+        height: 30px;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+    .container{
+        width: 100%;
+        margin: auto;
+        
+    }
+    #div1{
+        width: 300px;
+        height: 400px;
+        background-color: rgb(109, 109, 216);
+        margin-right:200px;
+        margin-left:120px;
+        margin-top: 30px;
+        padding:20px;
+        border-radius:10px;
+    }
+    #div2{
+        width: 300px;
+        height: 400px;
+        background-color: rgb(229, 98, 98);
+        margin-right:80px;
+        margin-left:50px;
+        margin-top: 30px;
+        padding:20px;
+        border-radius:10px;
+    }
+  
+
+    
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid" id="head">
+            <a class="logo navbar-brand text-light" href="#">
+                <i class="fa-solid fa-people-group fa-xl text-light" class="logo"></i>&nbsp;<b>Job
+                    <span>Portal</span></b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item ">
+                        <a class="nav-link active text-light" aria-current="page" href="index.html"
+                            style="padding-right:30px; font-size: 20px;font-family: 'Courier New';"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="jobs.html"
+                            style="padding-right:30px;font-size: 20px;font-family: 'Courier New';"><b>Jobs</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="companies.html"
+                            style="padding-right:30px;font-size: 20px;font-family: 'Courier New';"><b>Companies</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-disabled="true" href="#"
+                            style="padding-right:30px;font-size: 20px;font-family: 'Courier New';"><b>Contact</b>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                        </a>
+                    
+            </div>
+           
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="div1">
+                <i class="fa-solid fa-users-line fa-2xl"></i> <br> <br>
+              <h5><b>  Are you employers?</b></h5>
+              <br>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique mollitia laboriosam eos. Quod a autem atque impedit rem, architecto sed nam nihil? Fugiat laboriosam laborum et quae blanditiis nisi.</p>
+              <p><b>To post a job</b> <a href="posting-page.html" class="text-light">Click Here</a></p>
+              
+              </div>
+              <div class="col-md-6" id="div2">
+                <i class="fa-brands fa-searchengin fa-2xl"></i> <br> <br>
+              <h5><b>  Are you job seeker?</b></h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim similique mollitia laboriosam eos. Quod a autem atque impedit rem, architecto sed nam nihil? Fugiat laboriosam laborum et quae blanditiis nisi.</p>
+              <br>
+              <input type="file" id="hidden-file-input" style="display: none" onchange="handleFileChange(event)"/>
+              <button onclick="openFileInput()" style="background-color: rgb(135, 135, 215);height:40px;"><b>Upload your CV</b></button>
+              
+              </div>
+           
+
+        </div>
+
+    </div>
+    <script>
+        function openFileInput() {
+          document.getElementById('hidden-file-input').click();
+        }
+      
+        function handleFileChange(event) {
+          const selectedFile = event.target.files[0];
+          // Process the selected file here
+        }
+      </script>
+</body>
+</html>
